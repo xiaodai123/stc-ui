@@ -1,0 +1,283 @@
+@charset "UTF-8";
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  color: #303133;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+button,
+input {
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+img {
+  border: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/**********-公共类名-**********/
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.text_l {
+  text-align: left;
+}
+
+.text_r {
+  text-align: right;
+}
+
+.text_c {
+  text-align: center;
+}
+
+/*隐藏*/
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden2 {
+  visibility: hidden !important;
+}
+
+.show2 {
+  visibility: visible !important;
+}
+
+/*清除浮动*/
+.clear_fix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.border {
+  border: 1px #DCDFE6 solid;
+}
+
+.no_border {
+  border: none !important;
+}
+
+.no_padding {
+  padding: 0 !important;
+}
+
+.no_padding_l {
+  padding-left: 0 !important;
+}
+
+.no_padding_r {
+  padding-right: 0 !important;
+}
+
+.no_margin {
+  margin: 0 !important;
+}
+
+.no_margin_l {
+  margin-left: 0 !important;
+}
+
+.no_margin_r {
+  margin-right: 0 !important;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+/*fade-to-top*/
+.back-top-fade-enter,
+.back-top-fade-leave-active {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 0;
+}
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 0.28s;
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/*fade-transform*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+/*breadcrumb transition*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+.custom_dropdown {
+  padding: 10px;
+  border-radius: 0;
+  border-color: #d1dbe5;
+  text-align: center;
+}
+
+.custom_dropdown li {
+  padding: 0;
+  font-size: 13px;
+}
+
+.custom_dropdown li:focus, .custom_dropdown li:not(.is-disabled):hover {
+  background-color: transparent;
+  color: #66b1ff;
+}
+
+.custom_dropdown div[x-arrow] {
+  border-bottom-color: #d1dbe5 !important;
+}
+
+.query_card {
+  margin-left: -20px;
+}
+
+.query_card .el-form-item {
+  margin-bottom: 8px;
+}
+
+.table_card {
+  margin-top: 20px;
+}
+
+.common_width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .common_width {
+    width: 100%;
+  }
+}
+
+/*公共样式*/
+.common_prompt_box_style .el-message-box__message p {
+  height: auto;
+}
+
+.common_prompt_box_style .el-message-box__message .msg_box {
+  position: relative;
+  padding-left: 36px;
+  padding-right: 20px;
+  color: #333;
+}
+
+.common_prompt_box_style .el-message-box__message .msg_box .el-message-box__status {
+  left: 0;
+}
+
+.common_prompt_box_style .el-message-box__message .msg_box .msg_content {
+  font-size: 13px;
+}
+
+.common_prompt_box_style .el-message-box__message .msg_box .switch_btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.common_prompt_box_style .el-message-box__message .more_msg_box {
+  height: 0;
+  overflow: hidden;
+  margin-top: 5px;
+  padding-left: 36px;
+  color: #999;
+}
+/*# sourceMappingURL=public.css.map */

@@ -1,0 +1,81 @@
+{
+  "Basic": {
+    "path": "/basic",
+    "name": "Basic",
+    "root": true,
+    "meta": {
+      "icon": "dashboard",
+      "title": "Basic组件"
+    },
+    "children": [
+      {
+        "name": "AlertDemo",
+        "path": "alertDemo",
+        "componentPath": "/alert.md",
+        "meta": {
+          "icon": "dashboard",
+          "title": "Alert"
+        }
+      },
+      {
+        "name": "SvgIconDemo",
+        "path": "svgIconDemo",
+        "componentPath": "/svgIcon.md",
+        "meta": {
+          "icon": "dashboard",
+          "title": "SvgIcon"
+        }
+      }
+    ]
+  },
+  "Form": {
+    "path": "/form",
+    "name": "Form",
+    "root": true,
+    "meta": {
+      "icon": "dashboard",
+      "title": "Form组件"
+    },
+    "children": []
+  },
+  "Data": {
+    "path": "/data",
+    "name": "Data",
+    "root": true,
+    "meta": {
+      "icon": "dashboard",
+      "title": "Data组件"
+    },
+    "children": []
+  },
+  "Notice": {
+    "path": "/notice",
+    "name": "Notice",
+    "root": true,
+    "meta": {
+      "icon": "dashboard",
+      "title": "Notice组件"
+    },
+    "children": []
+  },
+  "Navigation": {
+    "path": "/navigation",
+    "name": "Navigation",
+    "root": true,
+    "meta": {
+      "icon": "dashboard",
+      "title": "Navigation组件"
+    },
+    "children": []
+  },
+  "Others": {
+    "path": "/others",
+    "name": "Others",
+    "root": true,
+    "meta": {
+      "icon": "dashboard",
+      "title": "Others"
+    },
+    "children": []
+  }
+}

@@ -1,0 +1,46 @@
+@import "config";
+
+/* BEM support Func
+ -------------------------- */
+@function selectorToString($selector) {
+    $selector: inspect($selector); // cast to string比如selector是.test就会变为(.test,)
+    $selector: str-slice($selector, 2, -2); // remove bracket比如把(.test,)改为test
+    @return $selector;
+}
+
+// 检测是否包含 --
+@function containsModifier($selector) {
+    $selector: selectorToString($selector);
+
+    @if str-index($selector, $modifier-separator) {
+        @return true;
+    }@else {
+        @return false;
+    }
+}
+
+// 检测是否包含 .is-
+@function containWhenFlag($selector) {
+    $selector: selectorToString($selector);
+
+    @if str-index($selector, '.' + $state-prefix) {
+        @return true;
+    }@else {
+        @return false;
+    }
+}
+
+// 检测是否包含 伪元素
+@function containPseudoClass($selector) {
+    $selector: selectorToString($selector);
+
+    @if str-index($selector, ':') {
+        @return true;
+    }@else {
+        @return false;
+    }
+}
+
+@function hitAllSpecialNestRule($selector) {
+    @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
+}

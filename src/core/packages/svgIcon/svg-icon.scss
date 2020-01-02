@@ -1,0 +1,5 @@
+@import "../theme-chalk/mixins/mixins";
+@import "../theme-chalk/common/var";
+@include blo(svg-icon) {
+    vertical-align: 'middle';
+}

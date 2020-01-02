@@ -1,0 +1,4 @@
+node_modules
+lib
+dist
+site/demo/static/lib/ckeditor*
