@@ -1,6 +1,6 @@
 # stc-ui
 
-> stc基础ui库 <a href="https://github.com/xiaodai123/stc-ui/tree/dev" target="_blank">github地址(https://github.com/xiaodai123/stc-ui/tree/dev)</a>
+> stc基础ui库 <a href="https://github.com/xiaodai123/stc-ui" target="_blank">github地址(https://github.com/xiaodai123/stc-ui)</a>
 
 1. **项目启动**
 
