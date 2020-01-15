@@ -1,0 +1,283 @@
+
+@import "../theme-chalk/mixins/mixins";
+@import "../theme-chalk/common/var";
+
+// 圆形内间距设置
+@mixin is-circle-padding($--circle-padding) {
+    &.is-circle{
+        padding: $--circle-padding;
+    }
+}
+@mixin base-color-style($--background-color,$--color,$--border-color){
+    background-color: $--background-color;
+    color: $--color;
+    border-color: $--border-color;
+}
+
+@include blo(button) {
+    line-height: 1;
+    box-sizing: border-box;
+    text-align: center;
+    border: $--border-base;
+    border-radius: 4px;
+    display: inline-block;
+    background: $--background-color-base;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 14px;
+    color: $--button-default-font-color;
+    &+& {
+        margin-left: 10px;
+    }
+    &:hover,&:focus{
+        @include base-color-style($--color-primary-light-8,$--color-primary-light-1,$--color-primary-light-6);
+    }
+    &.is-plain{
+        &:hover{
+            @include base-color-style($--background-color-base,$--color-primary-light-1,$--color-primary-light-1);
+        }
+    }
+    &.is-disabled,&.is-disabled:hover,
+    &.is-plain .is-disabled:hover,&.is-plain .is-disabled{
+        cursor: not-allowed;
+        @include base-color-style($--disabled-fill-base,$--disabled-color-base,$--disabled-color-base);
+    }
+    &.is-round{
+        border-radius: 20px;
+    }
+    &.is-circle{
+        border-radius: 50%;
+        padding: 10px;
+    }
+    &--primary{
+        background: $--color-primary;
+        color: $--color-white;
+        &:hover,&:focus{
+            background-color: $--color-primary-light-3;
+            color: $--color-white;
+        }
+        &.is-plain{
+            @include base-color-style(
+                $--color-primary-light-9,
+                $--color-primary-light-3,
+                $--color-primary-light-3
+            );
+            &:hover{
+                background-color: $--color-primary;
+                color: $--color-white;
+            }
+            &.is-disabled,&.is-disabled:hover{
+                @include base-color-style(
+                    $--color-primary-light-9,
+                    $--color-primary-light-5,
+                    $--color-primary-light-5
+                );
+            }
+        }
+        &.is-disabled,&.is-disabled:hover{
+            background-color: $--color-primary-light-5;
+            color: $--color-white;
+        }
+    }
+    &--success{
+        background-color: $--color-success;
+        color: $--color-white;
+        &:hover{
+            @include base-color-style(
+                mix($--color-white, $--color-success, 30%),
+                $--color-white,
+                mix($--color-white, $--color-success, 30%)
+            );
+        }
+        &.is-plain{
+            @include base-color-style(
+                mix($--color-white, $--color-success, 80%),
+                mix($--color-white, $--color-success, 30%),
+                mix($--color-white, $--color-success, 30%)
+            );
+            &:hover{
+                @include base-color-style(
+                    $--color-success,
+                    $--color-white,
+                    mix($--color-white, $--color-success, 30%)
+                );
+            }
+            &.is-disabled,&.is-disabled:hover{
+                @include base-color-style(
+                    mix($--color-white, $--color-success, 90%),
+                    mix($--color-white, $--color-success, 50%),
+                    mix($--color-white, $--color-success, 50%)
+                );
+            }
+        }
+        &.is-disabled,&.is-disabled:hover{
+            background-color: mix($--color-white, $--color-success, 50%);
+            color: $--color-white;
+        }
+    }
+    &--warning{
+        background-color: $--color-warning;
+        color: $--color-white;
+        &:hover,&:focus{
+            @include base-color-style(
+                mix($--color-white, $--color-warning, 30%),
+                $--color-white,
+                mix($--color-white, $--color-warning, 30%)
+            );
+        }
+        &.is-plain{
+            @include base-color-style(
+                mix($--color-white, $--color-warning, 80%),
+                mix($--color-white, $--color-warning, 30%),
+                mix($--color-white, $--color-warning, 30%)
+            );
+            &:hover{
+                @include base-color-style(
+                    $--color-warning,
+                    $--color-white,
+                    mix($--color-white, $--color-warning, 30%)
+                );
+            }
+            &.is-disabled,&.is-disabled:hover{
+                @include base-color-style(
+                    mix($--color-white, $--color-warning, 90%),
+                    mix($--color-white, $--color-warning, 50%),
+                    mix($--color-white, $--color-warning, 50%)
+                );
+            }
+        }
+        &.is-disabled,&.is-disabled:hover{
+            background-color: mix($--color-white, $--color-warning, 50%);
+            color: $--color-white;
+        }
+    }
+    &--danger{
+        background-color: $--color-danger;
+        color: $--color-white;
+        &:hover,&:focus{
+            @include base-color-style(
+                mix($--color-white, $--color-danger, 30%),
+                $--color-white,
+                mix($--color-white, $--color-danger, 30%)
+            );
+        }
+        &.is-plain{
+            @include base-color-style(
+                mix($--color-white, $--color-danger, 80%),
+                mix($--color-white, $--color-danger, 30%),
+                mix($--color-white, $--color-danger, 30%)
+            );
+            &:hover{
+                @include base-color-style(
+                    $--color-danger,
+                    $--color-white,
+                    mix($--color-white, $--color-danger, 30%)
+                );
+            }
+            &.is-disabled,&.is-disabled:hover{
+                @include base-color-style(
+                    mix($--color-white, $--color-danger, 90%),
+                    mix($--color-white, $--color-danger, 50%),
+                    mix($--color-white, $--color-danger, 50%)
+                );
+            }
+        }
+        &.is-disabled,&.is-disabled:hover{
+            background-color: mix($--color-white, $--color-danger, 50%);
+            color: $--color-white;
+        }
+    }
+    &--info{
+        background-color: $--color-info;
+        color: $--color-white;
+        &:hover,&:focus{
+            @include base-color-style(
+                mix($--color-white, $--color-info, 30%),
+                $--color-white,
+                mix($--color-white, $--color-info, 30%)
+            );
+        }
+        &.is-plain{
+            @include base-color-style(
+                mix($--color-white, $--color-info, 80%),
+                mix($--color-white, $--color-info, 30%),
+                mix($--color-white, $--color-info, 30%)
+            );
+            &:hover{
+                @include base-color-style(
+                    $--color-info,
+                    $--color-white,
+                    mix($--color-white, $--color-info, 30%)
+                );
+            }
+            &.is-disabled,&.is-disabled:hover{
+                @include base-color-style(
+                    mix($--color-white, $--color-info, 90%),
+                    mix($--color-white, $--color-info, 50%),
+                    mix($--color-white, $--color-info, 50%)
+                );
+            }
+        }
+        &.is-disabled,&.is-disabled:hover{
+            background-color: mix($--color-white, $--color-info, 50%);
+            color: $--color-white;
+        }
+    }
+    &--text{
+        border-color: transparent;
+        color: $--button-default-font-color;
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+        &:hover,&:focus{
+            @include base-color-style(
+                transparent,
+                $--color-primary,
+                transparent
+            );
+        }
+        &.is-disabled,&.is-disabled:hover{
+            @include base-color-style(
+                transparent,
+                $--disabled-color-base,
+                transparent
+            );
+        }
+    }
+    &--add{
+        @include base-color-style(
+            '#f4fbfe',
+            '#16b3fc',
+            '#9dddfb'
+        );
+        &:hover,&:focus{
+            background-color: mix($--color-white, #f4fbfe, 30%);
+        }
+    }
+
+    // 大小
+    // size:medium / small / mini
+    &--medium{
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        @include is-circle-padding(9px)
+    }
+    &--small{
+        padding: 9px 15px;
+        font-size: 12px;
+        border-radius: 3px;
+        @include is-circle-padding(7px)
+    }
+    &--mini{
+        padding: 7px 10px;
+        font-size: 12px;
+        border-radius: 3px;
+        @include is-circle-padding(5px)
+    }
+    
+}
+
+ 

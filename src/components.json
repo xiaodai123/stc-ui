@@ -1,4 +1,5 @@
 {
   "svgIcon": "./core/packages/svgIcon/index.js",
-  "alert": "./core/packages/alert/index.js"
+  "alert": "./core/packages/alert/index.js",
+  "button": "./core/packages/button/index.js"
 }

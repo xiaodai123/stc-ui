@@ -18,6 +18,15 @@
         }
       },
       {
+        "name": "ButtonDemo",
+        "path": "buttonDemo",
+        "componentPath": "/button.md",
+        "meta": {
+          "icon": "component",
+          "title": "Button"
+        }
+      },
+      {
         "name": "SvgIconDemo",
         "path": "svgIconDemo",
         "componentPath": "/svgIcon.md",
